@@ -11,7 +11,7 @@ path = r"C:/Users/zyq/Desktop/123.gif"
 frame_path = r"C:/Users/zyq/Desktop/frame{}.png"
 # frame_path = r"F:/UiBot/creator/Projects/闪烁中文二维码识别/验证码/frame{}.png"
 
-result_path = r"C:/Users/zyq/Desktop/test/result.png"  
+result_path = r"C:/Users/zyq/Desktop/result.png"  
 # result_path = r"F:/UiBot/creator/Projects/闪烁中文二维码识别/验证码/result.png"  
 
 
