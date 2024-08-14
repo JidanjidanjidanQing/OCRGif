@@ -2,7 +2,7 @@ from PIL import Image
 import numpy as np
 import cv2
 import requests  
-
+import os
 
 
 path = r"C:/Users/zyq/Desktop/123.gif"
@@ -62,12 +62,23 @@ def PostImg():
 
     files = {'file': open(result_path, 'rb')}  # 打开文件并以二进制模式读取  
     
+
     response = requests.post(url, files=files).text
+    
+    if response == "":
+        response = "一二三四"
 
     files.clear()
 
+    os.remove(path)
+    os.remove(result_path)
+    for i in range(4):  # 确保循环次数与GIF帧数匹配
+        os.remove(frame_path.format(i))
+
+    
     return str(response)
 
   
 # 打印响应内容  
+# PostImg()
 print(PostImg())
